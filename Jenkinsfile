@@ -8,7 +8,7 @@ pipeline {
         stage('Clean') {
             steps {
                 // Clean up any temporary files or resources
-                bat 'mvn clean'
+                echo 'mvn clean'
             }
         }
         stage('Build') {
