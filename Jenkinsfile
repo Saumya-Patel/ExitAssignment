@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven "maven_home"
+        maven "MAVEN_HOME"
     }
     environment {
         JAVA_HOME = 'C:\\Program Files\\OpenLogic\\jdk-21.0.3.1-hotspot'
