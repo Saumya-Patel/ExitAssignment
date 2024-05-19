@@ -8,10 +8,16 @@ pipeline {
         PATH = "${env.JAVA_HOME}\\bin;${env.PATH}"
     }
     stages {
+        stage('Clean Up') {
+            steps {
+                // Clean up any temporary files or resources
+                bat 'mvn clean'
+            }
+        }
         stage('Build') {
             steps {
                 // Clean and build the Maven project
-                bat 'mvn clean package'
+                bat 'mvn build'
             }
         }
         stage('Test') {
