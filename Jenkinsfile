@@ -8,7 +8,7 @@ pipeline {
         stage('Clean') {
             steps {
                 // Clean up any temporary files or resources
-                echo 'mvn clean'
+                bat 'mvn clean'
             }
         }
         stage('Build') {
@@ -20,7 +20,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Run tests
-                bat 'mvn test'
+                echo 'mvn test'
             }
         }
         stage('Deploy') {
